@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="עבודות בלימודים — אביב-אל דוידי">
+  <title>עבודות בלימודים — אביב-אל דוידי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style id="site-style"></style>
+  <style>
+    .gallery-topbar{position:relative;z-index:5;min-height:72px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;gap:22px;background:#170627;color:#fffaff;border-bottom:1px solid rgba(255,250,255,.22);font-family:"Heebo",Arial,sans-serif}.gallery-brand{font-size:17px;font-weight:900;line-height:.8;letter-spacing:-.08em}.gallery-topbar nav{display:flex;gap:18px;font-size:14px;font-weight:700}.gallery-topbar a{color:inherit;text-decoration:none}.gallery-topbar a:hover{color:#ff5b62}.gallery-topbar .back{border-bottom:1px solid #ff5b62;padding-bottom:4px}@media(max-width:650px){.gallery-topbar{padding:0 6vw;min-height:64px}.gallery-topbar nav{gap:12px;font-size:13px}}
+  </style>
+</head>
+<body>
+  <header class="gallery-topbar"><a class="gallery-brand" href="index.html">AV<br>DAVIDI</a><nav><a class="back" href="index.html">חזרה לדף הראשי</a><a href="bonus.html">בונוס: סימן לידה</a></nav></header>
+  <main id="gallery-host" aria-live="polite"><p style="padding:48px 7vw;margin:0;color:#fffaff;background:#170627;font-family:Heebo,Arial,sans-serif">טוען עבודות…</p></main>
+  <script>
+    (async()=>{
+      const html=await fetch('index.html').then(response=>{if(!response.ok)throw new Error('load failed');return response.text()});
+      const source=new DOMParser().parseFromString(html,'text/html');
+      document.querySelector('#site-style').textContent=source.querySelector('style').textContent;
+      document.querySelector('#gallery-host').replaceWith(source.querySelector('#work'));
+      document.body.append(source.querySelector('#modal'));
+      const app=document.createElement('script');app.textContent=source.scripts[source.scripts.length-1].textContent;document.body.append(app);
+    })().catch(()=>{document.querySelector('#gallery-host').innerHTML='<p style="padding:48px 7vw;color:#fffaff;background:#170627">לא הצלחנו לטעון את העבודות. נסו לרענן את הדף.</p>'});
+  </script>
+</body>
+</html>

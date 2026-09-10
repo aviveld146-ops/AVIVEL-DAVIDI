@@ -51,7 +51,8 @@
     .intro:after { content:""; position:absolute; width:150vmax; height:150vmax; border:2px solid rgba(255,250,255,.12); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); }
     .intro-mark:before { background:rgba(255,91,98,.42); }
     .intro-mark .mark-depth { filter:brightness(.3) sepia(.42) hue-rotate(205deg) saturate(2); }
-    .intro-mark .mark-face,.intro-mark .mark-back { filter:drop-shadow(0 34px 26px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(255,255,255,.18)); }
+    .intro-mark .mark-face { filter:brightness(0) saturate(100%) invert(78%) sepia(21%) saturate(1430%) hue-rotate(220deg) brightness(105%) contrast(103%) drop-shadow(0 34px 26px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(255,250,255,.32)); }
+    .intro-mark .mark-back { filter:brightness(0) saturate(100%) invert(53%) sepia(95%) saturate(2253%) hue-rotate(321deg) brightness(105%) contrast(102%) drop-shadow(0 34px 26px rgba(0,0,0,.55)); }
     .hero { min-height:100svh; padding:0 5vw; background:linear-gradient(112deg,#1a072d 0%,#42106e 55%,#250740 100%); }
     .hero:before { opacity:.26; background-image:radial-gradient(rgba(255,255,255,.48) 1px,transparent 1.4px); background-size:8px 8px; mask-image:linear-gradient(135deg,black 0 30%,transparent 59%); }
     header { min-height:74px; border-bottom:1px solid rgba(255,250,255,.22); font-size:11px; }
@@ -142,9 +143,10 @@
       .details { display:grid; gap:13px; margin-top:30px; }
       .details a { font-size:16px; width:max-content; }
     }
+    .home .work { display:none; }
   </style>
 </head>
-<body>
+<body class="home">
   <main>
     <section class="intro" id="top" aria-label="AVIVEL DAVIDI"><div class="intro-mark"><img class="mark-depth" style="--z:-34px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-28px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-22px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-16px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-10px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-4px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-face" src="media/hero/av-mark-clean.png" alt="AV monogram"><img class="mark-back" src="media/hero/av-mark-clean.png" alt=""></div></section>
     <section class="hero" id="about">
@@ -176,12 +178,12 @@
         <p class="gateway-kicker">מה בא לכם לראות?</p>
         <h2 class="gateway-heading">שני עולמות.<br>אותו ראש כותב.</h2>
         <div class="portals">
-          <a class="portal" href="#work" data-gallery="studies">
+          <a class="portal" href="works.html">
             <span class="portal-number">01 / PORTFOLIO</span>
             <div><h2>עבודות<br>בלימודים</h2><p>קופי, קמפיינים, ארט ורעיונות.</p></div>
             <span class="portal-arrow">↙</span>
           </a>
-          <a class="portal" href="#work" data-gallery="bonus">
+          <a class="portal" href="bonus.html">
             <span class="portal-number">02 / BONUS</span>
             <div><h2>בונוס</h2><p>סימן לידה — חוברת הקומיקס.</p></div>
             <span class="portal-arrow">↙</span>
