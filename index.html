@@ -147,34 +147,21 @@
       .details { display:grid; gap:13px; margin-top:30px; }
       .details a { font-size:16px; width:max-content; }
     }
+    .hero--portrait-only .hero-grid { min-height:calc(100svh - 74px); grid-template-columns:1fr; grid-template-areas:"portrait"; justify-items:center; }
+    .hero--portrait-only .portrait { width:min(540px,62vw); margin:0; }
+    @media(max-width:850px){.hero--portrait-only .hero-grid{grid-template-columns:1fr;grid-template-areas:"portrait";padding:22px 0 0}.hero--portrait-only .portrait{width:min(500px,88vw);min-height:500px;height:70vh}}
     .home .work { display:none; }
   </style>
 </head>
 <body class="home">
   <main>
     <section class="intro" id="top" aria-label="AVIVEL DAVIDI"><div class="intro-mark"><img class="mark-depth" style="--z:-34px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-28px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-22px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-16px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-10px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-4px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-face" src="media/hero/av-mark-clean.png" alt="AV monogram"><img class="mark-back" src="media/hero/av-mark-clean.png" alt=""></div><a class="scroll-cue" href="#about" aria-label="גלילה לתוכן האתר"><span>↓</span></a></section>
-    <section class="hero" id="about">
+    <section class="hero hero--portrait-only" id="about">
       <header>
         <a class="wordmark" href="#top" aria-label="חזרה להתחלה"><span>AV</span><span>DAVIDI</span></a>
-        <nav><a href="#about">האיש והכובע</a><a href="#choices">העבודות</a><a href="#contact">צרו קשר</a></nav>
-        <a class="mail" href="mailto:AVIVELD146@GMAIL.COM">LET'S TALK</a>
+        <nav><a href="#top">ראשי</a><a href="#choices">העבודות</a><a href="#contact">צרו קשר</a></nav>
       </header>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">COPYWRITER <i></i> NETANYA, IL</p>
-          <p class="intro-line">קופי, ארט וכתיבה — זה אני.</p>
-          <div class="bio-lines">
-            <strong>אביב-אל דוידי</strong>
-            <span>בוגר מכללת תרצה גרנות ACC</span>
-          </div>
-          <div class="quick-contact">
-            <a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a>
-            <a href="tel:+972545891511">054-589-1511</a>
-          </div>
-        </div>
-        <figure class="portrait"><img src="media/hero/avivel-comic-hero.png" alt="איור קומיקס של אביב-אל דוידי עם הכובע המזוהה איתו"><figcaption>THE ORIGINAL / 01</figcaption></figure>
-      </div>
-      <div class="hero-footer"><p>WORDS WITH A POINT OF VIEW</p><p>© 2026 AVIVEL DAVIDI</p><p>HE / EN</p></div>
+      <div class="hero-grid"><figure class="portrait"><img src="media/hero/avivel-comic-hero.png" alt="איור קומיקס של אביב-אל דוידי עם הכובע המזוהה איתו"></figure></div>
     </section>
     <section class="gateway" id="choices">
       <div class="gateway-inner">
