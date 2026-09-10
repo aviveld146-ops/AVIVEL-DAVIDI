@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="AVIVEL DAVIDI — Copywriter portfolio" />
   <title>AVIVEL DAVIDI — Copywriter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root { --ink:#101010; --paper:#ebe7df; --cream:#f2eee6; --red:#df2a2a; --line:rgba(242,238,230,.22); }
     * { box-sizing:border-box } html { scroll-behavior:smooth; background:var(--ink) } body { margin:0; background:var(--ink); color:var(--cream); font-family:Arial,"Noto Sans Hebrew",sans-serif } button,a { font:inherit } a { color:inherit;text-decoration:none }
@@ -38,15 +41,160 @@
     @media(max-width:1100px){.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:850px){.intro-mark{width:min(74vw,390px)}.hero-grid{grid-template-columns:minmax(128px,39vw) minmax(0,1fr);grid-template-areas:"portrait copy"}}
     @media(max-width:650px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+
+    /* Purple graphic-novel redesign */
+    :root { --ink:#10051d; --violet:#4b167f; --violet-bright:#7a32cf; --violet-soft:#d9beff; --paper:#f8f2ff; --cream:#fffaff; --red:#ff5b62; --line:rgba(255,250,255,.25); }
+    html,body { background:var(--ink); }
+    body,button { font-family:"Heebo",Arial,sans-serif; }
+    .intro { min-height:100svh; background:radial-gradient(circle at 50% 48%,#7c31cb 0%,#37105e 24%,#170626 62%,#10051d 100%); }
+    .intro:before { opacity:.32; background-image:radial-gradient(rgba(255,255,255,.4) 1px,transparent 1.5px),linear-gradient(135deg,transparent 48%,rgba(255,255,255,.1) 49%,rgba(255,255,255,.1) 51%,transparent 52%); background-size:9px 9px,48px 48px; mask-image:linear-gradient(90deg,transparent,black 18%,black 82%,transparent); }
+    .intro:after { content:""; position:absolute; width:150vmax; height:150vmax; border:2px solid rgba(255,250,255,.12); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); }
+    .intro-mark:before { background:rgba(255,91,98,.42); }
+    .intro-mark .mark-depth { filter:brightness(.3) sepia(.42) hue-rotate(205deg) saturate(2); }
+    .intro-mark .mark-face,.intro-mark .mark-back { filter:drop-shadow(0 34px 26px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(255,255,255,.18)); }
+    .hero { min-height:100svh; padding:0 5vw; background:linear-gradient(112deg,#1a072d 0%,#42106e 55%,#250740 100%); }
+    .hero:before { opacity:.26; background-image:radial-gradient(rgba(255,255,255,.48) 1px,transparent 1.4px); background-size:8px 8px; mask-image:linear-gradient(135deg,black 0 30%,transparent 59%); }
+    header { min-height:74px; border-bottom:1px solid rgba(255,250,255,.22); font-size:11px; }
+    .wordmark { font-size:16px; line-height:.72; letter-spacing:-.08em; }
+    nav { gap:21px; color:var(--cream); font-weight:600; }
+    nav a { padding:6px 0; }
+    nav a:hover { color:var(--red); }
+    .mail { border-color:var(--red); font-weight:700; }
+    .hero-grid { min-height:calc(100svh - 128px); grid-template-columns:minmax(0,1fr) minmax(310px,.82fr); grid-template-areas:"copy portrait"; gap:clamp(26px,5vw,86px); }
+    .hero-copy { grid-area:copy; justify-self:stretch; align-self:center; padding:40px 0 56px; text-align:right; }
+    .hero-copy .eyebrow { justify-content:flex-start; color:var(--violet-soft); font-weight:700; }
+    .hero-copy .eyebrow i { background:var(--red); }
+    .hero-title { max-width:640px; margin:24px 0 0; font-size:clamp(68px,10.5vw,168px); font-weight:900; line-height:.74; letter-spacing:-.09em; color:var(--cream); }
+    .hero-title span { display:block; color:var(--red); }
+    .intro-line { margin:34px 0 0; max-width:430px; color:var(--cream); font-size:clamp(18px,1.7vw,25px); font-weight:700; line-height:1.3; }
+    .bio-lines { display:grid; gap:8px; margin-top:35px; color:rgba(255,250,255,.84); font-size:16px; line-height:1.45; }
+    .bio-lines strong { color:var(--cream); font-size:20px; }
+    .quick-contact { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:28px; direction:ltr; }
+    .quick-contact a { padding-bottom:4px; border-bottom:1px solid rgba(255,250,255,.42); color:var(--cream); font-size:13px; font-weight:700; }
+    .quick-contact a:hover { color:var(--red); border-color:var(--red); }
+    .portrait { grid-area:portrait; align-self:end; min-height:min(760px,calc(100svh - 74px)); margin:0; background:transparent; overflow:visible; }
+    .portrait:before { content:""; position:absolute; inset:7% 4% 0; z-index:-1; background:linear-gradient(160deg,#8c3fdf,rgba(48,9,87,.2)); border:1px solid rgba(255,250,255,.38); box-shadow:18px 18px 0 rgba(255,91,98,.8); transform:rotate(2.5deg); }
+    .portrait:after { inset:0; background:linear-gradient(0deg,rgba(16,5,29,.5),transparent 35%),linear-gradient(110deg,rgba(115,42,198,.4),transparent 55%); mix-blend-mode:color; pointer-events:none; }
+    .portrait img { filter:contrast(1.08) brightness(1.03); object-position:60% center; }
+    .portrait figcaption { color:var(--cream); right:18px; bottom:18px; transform:none; font-weight:700; }
+    .hero-footer { min-height:54px; border-top:1px solid rgba(255,250,255,.22); color:rgba(255,250,255,.7); font-weight:600; }
+    .gateway { position:relative; padding:clamp(80px,11vw,160px) 7vw; overflow:hidden; background:#f7f0ff; color:var(--ink); }
+    .gateway:before { content:""; position:absolute; width:55vw; height:55vw; max-width:780px; max-height:780px; top:-32vw; left:-13vw; border:48px solid rgba(122,50,207,.11); border-radius:50%; }
+    .gateway-inner { position:relative; z-index:1; max-width:1260px; margin:auto; }
+    .gateway-kicker { margin:0; color:var(--violet); font-size:13px; font-weight:800; letter-spacing:.08em; }
+    .gateway-heading { max-width:760px; margin:18px 0 48px; font-size:clamp(42px,6vw,86px); font-weight:900; line-height:.92; letter-spacing:-.06em; }
+    .portals { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .portal { min-height:310px; position:relative; display:flex; flex-direction:column; justify-content:space-between; padding:28px; overflow:hidden; background:var(--ink); color:var(--cream); border:2px solid var(--ink); transition:transform .25s,background .25s; }
+    .portal:before { content:""; position:absolute; width:300px; height:300px; border:30px solid rgba(255,255,255,.12); border-radius:50%; left:-128px; bottom:-145px; transition:transform .45s; }
+    .portal:nth-child(2) { background:var(--violet); border-color:var(--violet); }
+    .portal:nth-child(2):before { border-color:rgba(255,91,98,.55); }
+    .portal:hover { transform:translateY(-8px) rotate(-.5deg); }
+    .portal:hover:before { transform:scale(1.3); }
+    .portal .portal-number,.portal .portal-arrow,.portal h2,.portal p { position:relative; z-index:1; }
+    .portal-number { color:var(--red); font-size:13px; font-weight:800; direction:ltr; }
+    .portal h2 { margin:0; font-size:clamp(38px,4.5vw,70px); font-weight:900; line-height:.92; letter-spacing:-.07em; }
+    .portal p { margin:12px 0 0; color:rgba(255,250,255,.78); font-size:17px; }
+    .portal-arrow { align-self:flex-end; color:var(--red); font-size:42px; line-height:1; }
+    .work { background:#170627; padding:110px 7vw 128px; }
+    .work .section-index { color:var(--red); }
+    .work-heading { max-width:100%; display:flex; align-items:end; justify-content:space-between; gap:30px; }
+    .work-heading h2 { margin:18px 0 0; color:var(--cream); font-family:"Heebo",Arial,sans-serif; font-size:clamp(43px,5.5vw,78px); font-weight:900; line-height:.86; }
+    .work-heading .kicker { color:var(--violet-soft); font-weight:800; }
+    .gallery-note { max-width:300px; margin:0; color:rgba(255,250,255,.68); font-size:15px; line-height:1.45; }
+    .project-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin-top:54px; }
+    .card { aspect-ratio:1; min-height:0; border:1px solid rgba(255,250,255,.22); background:#2b1246; }
+    .card>img,.video-cover { min-height:0; height:100%; }
+    .card:after { background:linear-gradient(0deg,rgba(16,5,29,.95),rgba(16,5,29,.04) 68%); }
+    .card:hover { border-color:var(--red); transform:translateY(-5px); }
+    .number { color:var(--red); font-weight:800; }
+    .meta h3 { font-family:"Heebo",Arial,sans-serif; font-size:clamp(22px,2vw,31px); font-weight:800; line-height:.94; }
+    .meta p { color:rgba(255,250,255,.72); }
+    .arrow { color:var(--red); }
+    .contact { min-height:0; padding:76px 7vw; background:var(--red); color:#190725; display:flex; align-items:center; justify-content:space-between; gap:40px; }
+    .contact .section-index { color:#190725; }
+    .contact-main h2 { margin:0; font-family:"Heebo",Arial,sans-serif; font-size:clamp(47px,6vw,90px); font-weight:900; line-height:.8; letter-spacing:-.08em; }
+    .details { display:flex; gap:22px; align-items:center; direction:ltr; padding:0; }
+    .details a { margin:0; padding:0 0 7px; border-bottom:2px solid #190725; color:#190725; font-family:"Heebo",Arial,sans-serif; font-size:clamp(15px,1.6vw,21px); font-weight:800; }
+    .details p { display:none; }
+    .modal { background:rgba(15,4,26,.98); }
+    .close:hover,.nav-btn:hover { color:var(--red); }
+    .thumbs button.active { border-color:var(--red); }
+    @media(max-width:850px) {
+      .hero { padding:0 6vw; }
+      .hero-grid { min-height:auto; grid-template-columns:1fr; grid-template-areas:"copy" "portrait"; gap:14px; padding:54px 0 0; }
+      .hero-copy { padding:16px 0 18px; }
+      .hero-title { margin-top:18px; font-size:clamp(63px,18vw,108px); }
+      .intro-line { margin-top:23px; font-size:19px; }
+      .bio-lines { margin-top:24px; font-size:15px; }
+      .quick-contact { margin-top:22px; }
+      .portrait { min-height:490px; height:68vh; max-height:680px; }
+      .portrait:before { inset:6% 7% 0; box-shadow:10px 10px 0 var(--red); }
+      .hero-footer { font-size:8px; }
+      .gateway { padding:82px 6vw; }
+      .gateway-heading { margin-bottom:30px; }
+      .portals { grid-template-columns:1fr; }
+      .portal { min-height:235px; padding:22px; }
+      .work { padding:86px 6vw; }
+      .work-heading { display:block; }
+      .gallery-note { margin:20px 0 0; }
+      .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; margin-top:36px; }
+      .contact { padding:60px 6vw; display:block; }
+      .details { display:grid; gap:13px; margin-top:30px; }
+      .details a { font-size:16px; width:max-content; }
+    }
   </style>
 </head>
 <body>
   <main>
     <section class="intro" id="top" aria-label="AVIVEL DAVIDI"><div class="intro-mark"><img class="mark-depth" style="--z:-34px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-28px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-22px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-16px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-10px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-4px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-face" src="media/hero/av-mark-clean.png" alt="AV monogram"><img class="mark-back" src="media/hero/av-mark-clean.png" alt=""></div></section>
-    <section class="hero" id="about"><header><a class="wordmark" href="#top"><span>AVIVEL</span><span>DAVIDI</span></a><nav><a href="#about">אודות</a><a href="#work">עבודות</a><a href="#contact">יצירת קשר</a></nav><a class="mail" href="mailto:AVIVELD146@GMAIL.COM">LET'S TALK</a></header><div class="hero-grid"><div class="hero-copy"><p class="eyebrow">COPYWRITER <i></i> NETANYA, IL</p><div class="name-lockup"><h1><span>AVIVEL</span><span>DAVIDI</span></h1><p class="hebrew-name">אביב-אל דוידי</p></div><p class="statement">I write from outside<br>the box.</p></div><figure class="portrait"><img src="media/hero/avivel-portrait-hat.png" alt="אביב-אל דוידי"><figcaption>01 / THE ORIGINAL</figcaption></figure></div><div class="hero-footer"><p>WORDS THAT STAY WITH YOU</p><p>© 2026 AVIVEL DAVIDI</p><p>HE / EN</p></div></section>
-    <section class="about section" id="story"><div class="section-index">01 / ABOUT</div><div><p class="kicker">קצת מעבר למילים</p><h2>אני חי<br><em>מחוץ לקופסה.</em></h2></div><div class="about-body"><p class="lead">אני אביב-אל דוידי — קופירייטר שמאמין שלמילים טובות יש תזמון, קצב ונוכחות.</p><p>כתבתי למגירה סדרת אנימציה בשם ״סימן לידה״, וכיום אני מעבד אותה לחוברת קומיקס. אפשר לראות חלקים ממנה בעבודות שלי.</p><p>עליתי לבמה כשחקן במספר הצגות, ועבדתי כעוזר במאי וכעוזר מפיק — גם בהפקות שבהן השתתפתי כשחקן וגם באלו שבהן הייתי מאחורי הקלעים. כך למדתי לראות רעיון מכל זווית: מהמילה הראשונה ועד הרגע שבו היא פוגשת קהל.</p><p>כתבתי גם מחזה, יצירה שהתוכניות להעלותה נעצרו בגלל הקורונה — ומאז, לצערי, עדיין לא קיבלה את הבמה שלה.</p><p>אני מחפש יד חופשית בכתיבה: מקום שבו אפשר לשאול שאלות, לקחת כיוון לא צפוי וליצור משהו שאי אפשר לדלג עליו.</p></div><div class="skills"><p>תחומי התמחות</p><div class="skill"><span>01</span>תסריטים</div><div class="skill"><span>02</span>סלוגנים</div><div class="skill"><span>03</span>קמפיינים</div></div></section>
-    <section class="work section" id="work"><div class="section-index">02 / SELECTED WORK</div><div class="work-heading"><p class="kicker">SELECTED WORK</p><h2>THE WORK<br><em>IS HERE.</em></h2><p>כל תיקייה היא פרויקט. לחצו כדי להיכנס לגלריה המלאה.</p></div><div class="project-grid" id="project-grid"></div></section>
-    <section class="contact section" id="contact"><div class="section-index">03 / CONTACT</div><div class="contact-main"><h2>צרו קשר</h2></div><div class="details"><a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a><a href="tel:+972545891511">054-589-1511</a><p>נתניה · זמין לפרויקטים ולמשרות</p><p>עברית — שפת אם · English — very good</p></div></section>
+    <section class="hero" id="about">
+      <header>
+        <a class="wordmark" href="#top" aria-label="חזרה להתחלה"><span>AV</span><span>DAVIDI</span></a>
+        <nav><a href="#about">האיש והכובע</a><a href="#choices">העבודות</a><a href="#contact">צרו קשר</a></nav>
+        <a class="mail" href="mailto:AVIVELD146@GMAIL.COM">LET'S TALK</a>
+      </header>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">COPYWRITER <i></i> NETANYA, IL</p>
+          <h1 class="hero-title">האיש<span>והכובע</span></h1>
+          <p class="intro-line">קופי, ארט וכתיבה — זה אני.</p>
+          <div class="bio-lines">
+            <strong>אביב-אל דוידי</strong>
+            <span>בוגר מכללת תרצה גרנות ACC</span>
+          </div>
+          <div class="quick-contact">
+            <a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a>
+            <a href="tel:+972545891511">054-589-1511</a>
+          </div>
+        </div>
+        <figure class="portrait"><img src="media/hero/avivel-portrait-hat.png" alt="אביב-אל דוידי עם הכובע המזוהה איתו"><figcaption>THE ORIGINAL / 01</figcaption></figure>
+      </div>
+      <div class="hero-footer"><p>WORDS WITH A POINT OF VIEW</p><p>© 2026 AVIVEL DAVIDI</p><p>HE / EN</p></div>
+    </section>
+    <section class="gateway" id="choices">
+      <div class="gateway-inner">
+        <p class="gateway-kicker">מה בא לכם לראות?</p>
+        <h2 class="gateway-heading">שני עולמות.<br>אותו ראש כותב.</h2>
+        <div class="portals">
+          <a class="portal" href="#work" data-gallery="studies">
+            <span class="portal-number">01 / PORTFOLIO</span>
+            <div><h2>עבודות<br>בלימודים</h2><p>קופי, קמפיינים, ארט ורעיונות.</p></div>
+            <span class="portal-arrow">↙</span>
+          </a>
+          <a class="portal" href="#work" data-gallery="bonus">
+            <span class="portal-number">02 / BONUS</span>
+            <div><h2>בונוס</h2><p>סימן לידה — חוברת הקומיקס.</p></div>
+            <span class="portal-arrow">↙</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="work section" id="work">
+      <div class="section-index">01 / THE WORK</div>
+      <div class="work-heading"><div><p class="kicker" id="work-kicker">01 / PORTFOLIO</p><h2 id="work-title">עבודות בלימודים</h2></div><p class="gallery-note" id="gallery-note">כל תיקייה היא פרויקט. לחצו כדי להיכנס לגלריה המלאה.</p></div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+    <section class="contact section" id="contact"><div class="section-index">02 / CONTACT</div><div class="contact-main"><h2>צרו קשר</h2></div><div class="details"><a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a><a href="tel:+972545891511">054-589-1511</a></div></section>
   </main>
   <div class="modal" id="modal" hidden><button class="close" id="close" aria-label="Close">×</button><button class="nav-btn" id="previous" aria-label="Previous">←</button><figure><div id="modal-content"></div><figcaption id="caption"></figcaption></figure><button class="nav-btn" id="next" aria-label="Next">→</button><div class="thumbs" id="thumbs"></div></div>
   <script>
@@ -76,7 +224,7 @@
       ["בחירות 2026","Campaign concepts","vote-2026",["Generated image 1 (1).png","Generated image 1.png","Generated image 2.png"]],
       ["COSMIC CAT CAFE","Golda pop-up","golda-cosmic-cat-cafe",["Generated image 1.png","Generated image 1 (1).png","Generated image 1 (2).png","Generated image 1 (3).png","Generated image 1 (4).png","Generated image 1 (5).png","Generated image 1 (6).png","Generated image 1 (7).png","Generated image 1 (8).png","Generated image 1 (9).png","Generated image 1 (10).png","Generated image 1 (11).png","גלידת חלב מתוקה, עוגיות חתול, ריפל אוכמניות־לבנדר וכוכבי שוקולד לבן..png"]],
       ["KAWIAII CHAOS","Golda pop-up","golda-kawiaii-chaos",["Generated image 1.png","Generated image 1 (5).png","Generated image 1 (6).png","Generated image 1 (8).png","Generated image 1 (10).png","Generated image 1 (12).png","Generated image 1 (16).png","Generated image 1 (17).png","Generated image 2.png","Generated image 2 (1).png","Generated image 4.png","גלידת צמר גפן מתוק, מרשמלו יוזו, ריפל פטל וסוכריות צבעוניות בצורות כוכבים.png"]],
-      ["קומיקס","פרק 1","comic",["001.png","002.png","003.png","004.png","005.png","006.png","007.png","008.png","009.png","010.png","011.png","012.png","013.png","014.png","015.png","016.png","017.png","018.png","019.png","020.png","021.png","022.png","023.png","024.png","025.png","026.png","027.png","028.png","029.png","030.png","031.png","032.png","033.png","034.png","035.png","036.png","037.png"]],
+      ["סימן לידה","חוברת קומיקס","comic",["001.png","002.png","003.png","004.png","005.png","006.png","007.png","008.png","009.png","010.png","011.png","012.png","013.png","014.png","015.png","016.png","017.png","018.png","019.png","020.png","021.png","022.png","023.png","024.png","025.png","026.png","027.png","028.png","029.png","030.png","031.png","032.png","033.png","034.png","035.png","036.png","037.png"]],
     ].map(([title,subtitle,slug,files]) => ({ title, subtitle, items: files.map(file => ({type:"image",src:image(slug,file)})) }));
     projects.push(
       {title:"טקילה — סדרה",subtitle:"Video campaign",items:["tequila-hotel.mp4","tequila-beach.mp4","tequila-wedding.mp4"].map(src=>({type:"video",src:video(src)}))},
@@ -84,9 +232,14 @@
       {title:"וידאו נוסף",subtitle:"Experiments",items:["final-cut-web.mp4","black-panther-logo.mp4"].map(src=>({type:"video",src:video(src)}))},
       {title:"אנימציות",subtitle:"Motion experiments",items:["אנימציית טעינה 1.mp4","אנימציית טעינה 2.mp4"].map(src=>({type:"video",src:image("misc",src)}))}
     );
-    const grid=document.querySelector('#project-grid'),modal=document.querySelector('#modal'),content=document.querySelector('#modal-content'),caption=document.querySelector('#caption'),thumbs=document.querySelector('#thumbs'); let active=null,index=0;
+    const grid=document.querySelector('#project-grid'),modal=document.querySelector('#modal'),content=document.querySelector('#modal-content'),caption=document.querySelector('#caption'),thumbs=document.querySelector('#thumbs'),workTitle=document.querySelector('#work-title'),workKicker=document.querySelector('#work-kicker'),galleryNote=document.querySelector('#gallery-note'); let active=null,index=0;
     const cardMedia=item=>item.type==='video'?`<video class="video-cover" src="${item.src}" muted preload="metadata"></video>`:`<img src="${item.src}" alt="" loading="lazy">`;
-    projects.forEach((project,i)=>{const card=document.createElement('button');card.className='card';card.innerHTML=`${cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>open(project);grid.append(card)});
+    const comicProject=projects.find(project=>project.title==='סימן לידה');
+    const studyProjects=projects.filter(project=>project!==comicProject);
+    function renderGrid(list){grid.innerHTML='';list.forEach((project,i)=>{const card=document.createElement('button');card.className='card';card.innerHTML=`${cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>open(project);grid.append(card)})}
+    function selectGallery(mode){const bonus=mode==='bonus';workTitle.textContent=bonus?'בונוס: סימן לידה':'עבודות בלימודים';workKicker.textContent=bonus?'02 / BONUS':'01 / PORTFOLIO';galleryNote.textContent=bonus?'הצצה לחוברת הקומיקס שכתבתי — לחצו כדי לדפדף בפרק הראשון.':'כל תיקייה היא פרויקט. לחצו כדי להיכנס לגלריה המלאה.';renderGrid(bonus?[comicProject]:studyProjects)}
+    document.querySelectorAll('[data-gallery]').forEach(link=>link.addEventListener('click',()=>selectGallery(link.dataset.gallery)));
+    selectGallery('studies');
     function open(project){active=project;index=0;modal.hidden=false;document.body.style.overflow='hidden';render()};function close(){modal.hidden=true;document.body.style.overflow='';active=null};function render(){const item=active.items[index];content.innerHTML=item.type==='video'?`<video class="modal-media" src="${item.src}" controls autoplay></video>`:`<img class="modal-media" src="${item.src}" alt="${active.title}">`;caption.innerHTML=`<b>${active.title}</b><span>${String(index+1).padStart(2,'0')} / ${String(active.items.length).padStart(2,'0')}</span>`;thumbs.innerHTML='';active.items.forEach((item,i)=>{const b=document.createElement('button');b.className=i===index?'active':'';b.innerHTML=item.type==='video'?'<span>▶</span>':`<img src="${item.src}" alt="">`;b.onclick=()=>{index=i;render()};thumbs.append(b)})};function move(amount){if(!active)return;index=(index+amount+active.items.length)%active.items.length;render()};document.querySelector('#close').onclick=close;document.querySelector('#previous').onclick=()=>move(-1);document.querySelector('#next').onclick=()=>move(1);window.onkeydown=e=>{if(!active)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1)};
   </script>
 </body>
