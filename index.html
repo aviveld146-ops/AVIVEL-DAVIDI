@@ -53,10 +53,10 @@
     .intro-mark .mark-depth { filter:brightness(.36) sepia(.28) hue-rotate(205deg) saturate(1.25); opacity:.78; }
     .intro-mark .mark-face { filter:brightness(0) saturate(100%) invert(91%) sepia(9%) saturate(1274%) hue-rotate(211deg) brightness(104%) contrast(94%) drop-shadow(0 22px 30px rgba(7,1,14,.42)) drop-shadow(0 0 12px rgba(255,250,255,.2)); }
     .intro-mark .mark-back { filter:brightness(0) saturate(100%) invert(84%) sepia(31%) saturate(539%) hue-rotate(289deg) brightness(102%) contrast(96%) drop-shadow(0 22px 30px rgba(7,1,14,.42)); }
-    .scroll-cue { position:absolute; z-index:3; left:50%; bottom:26px; display:grid; place-items:center; width:44px; height:52px; color:var(--cream); text-decoration:none; transform:translateX(-50%); }
-    .scroll-cue:before { content:""; position:absolute; top:0; width:1px; height:20px; background:rgba(255,250,255,.6); }
-    .scroll-cue span { margin-top:18px; font-size:29px; line-height:1; animation:scroll-bounce 1.8s ease-in-out infinite; }
-    @keyframes scroll-bounce { 0%,100% { transform:translateY(0); opacity:.6; } 50% { transform:translateY(9px); opacity:1; } }
+    .scroll-cue { position:absolute; z-index:3; left:50%; bottom:28px; display:grid; place-items:center; width:58px; height:68px; color:var(--cream); text-decoration:none; transform:translateX(-50%); }
+    .scroll-cue:before { content:""; position:absolute; top:0; width:2px; height:27px; background:rgba(255,250,255,.84); box-shadow:0 0 12px rgba(255,250,255,.4); }
+    .scroll-cue span { margin-top:24px; font-size:42px; font-weight:700; line-height:1; text-shadow:0 0 16px rgba(255,250,255,.55); animation:scroll-bounce 1.65s ease-in-out infinite; }
+    @keyframes scroll-bounce { 0%,100% { transform:translateY(0); opacity:.68; } 50% { transform:translateY(12px); opacity:1; } }
     .hero { min-height:100svh; padding:0 5vw; background:linear-gradient(112deg,#1a072d 0%,#42106e 55%,#250740 100%); }
     .hero:before { opacity:.26; background-image:radial-gradient(rgba(255,255,255,.48) 1px,transparent 1.4px); background-size:8px 8px; mask-image:linear-gradient(135deg,black 0 30%,transparent 59%); }
     header { min-height:74px; border-bottom:1px solid rgba(255,250,255,.22); font-size:11px; }
