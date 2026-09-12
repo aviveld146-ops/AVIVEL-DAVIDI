@@ -151,18 +151,24 @@
     .hero--portrait-only .hero-grid { min-height:calc(100svh - 74px); grid-template-columns:1fr; grid-template-areas:"portrait"; justify-items:center; }
     .hero--portrait-only .portrait { width:min(540px,62vw); margin:0; }
     @media(max-width:850px){.hero--portrait-only .hero-grid{grid-template-columns:1fr;grid-template-areas:"portrait";padding:22px 0 0}.hero--portrait-only .portrait{width:min(500px,88vw);min-height:500px;height:70vh}}
+    .hero--portfolio-card .hero-grid { min-height:calc(100svh - 74px); grid-template-columns:1fr; grid-template-areas:"portrait"; justify-items:center; }
+    .hero--portfolio-card .portrait { width:min(1120px,86vw); min-height:0; height:auto; aspect-ratio:16 / 9; margin:0; align-self:center; overflow:hidden; background:#31106b; box-shadow:16px 16px 0 rgba(255,91,98,.78); }
+    .hero--portfolio-card .portrait:before { inset:0; transform:none; border:0; box-shadow:none; background:linear-gradient(145deg,rgba(185,121,255,.34),rgba(54,8,105,.2)); }
+    .hero--portfolio-card .portrait:after { background:linear-gradient(0deg,rgba(16,5,29,.22),transparent 32%); }
+    .hero--portfolio-card .portrait img { width:100%; height:100%; object-fit:cover; object-position:center; }
+    @media(max-width:850px){.hero--portfolio-card .hero-grid{min-height:auto;grid-template-columns:1fr;grid-template-areas:"portrait";padding:44px 0 36px}.hero--portfolio-card .portrait{width:100%;min-height:0;height:auto;aspect-ratio:16 / 9;box-shadow:9px 9px 0 var(--red)}}
     .home .work { display:none; }
   </style>
 </head>
 <body class="home">
   <main>
     <section class="intro" id="top" aria-label="AVIVEL DAVIDI"><div class="intro-mark"><img class="mark-depth" style="--z:-34px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-28px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-22px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-16px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-10px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-depth" style="--z:-4px" src="media/hero/av-mark-clean.png" alt=""><img class="mark-face" src="media/hero/av-mark-clean.png" alt="AV monogram"><img class="mark-back" src="media/hero/av-mark-clean.png" alt=""></div><a class="scroll-cue" href="#about" aria-label="גלילה לתוכן האתר"><span>↓</span></a></section>
-    <section class="hero hero--portrait-only" id="about">
+    <section class="hero hero--portfolio-card" id="about">
       <header>
         <a class="wordmark" href="#top" aria-label="חזרה להתחלה"><span>AVIVEL</span><span>DAVIDI</span></a>
         <nav><a href="#top">ראשי</a><a href="#choices">העבודות</a><a href="#contact">צרו קשר</a></nav>
       </header>
-      <div class="hero-grid"><figure class="portrait"><img src="media/hero/avivel-comic-hero.png" alt="איור קומיקס של אביב-אל דוידי עם הכובע המזוהה איתו"></figure></div>
+      <div class="hero-grid"><figure class="portrait"><img src="media/hero/avivel-multi-skill-hero.png" alt="איור קומיקס של אביב-אל דוידי המציג את תחומי העשייה שלו"></figure></div>
     </section>
     <section class="gateway" id="choices">
       <div class="gateway-inner">
