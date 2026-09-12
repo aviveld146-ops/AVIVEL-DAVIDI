@@ -12,6 +12,7 @@
   <style id="site-style"></style>
   <style>
     .gallery-topbar{position:relative;z-index:5;min-height:72px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;gap:22px;background:#170627;color:#fffaff;border-bottom:1px solid rgba(255,250,255,.22);font-family:"Heebo",Arial,sans-serif}.gallery-brand{font-size:17px;font-weight:900;line-height:.8;letter-spacing:-.08em}.gallery-topbar nav{display:flex;gap:18px;font-size:14px;font-weight:700}.gallery-topbar a{color:inherit;text-decoration:none}.gallery-topbar a:hover{color:#ff5b62}.gallery-topbar .back{border-bottom:1px solid #ff5b62;padding-bottom:4px}@media(max-width:650px){.gallery-topbar{padding:0 6vw;min-height:64px}.gallery-topbar nav{gap:12px;font-size:13px}}
+    .writing-showcase{padding:92px 7vw 110px;background:#f7f0ff;color:#190725;font-family:"Heebo",Arial,sans-serif}.writing-showcase__heading{max-width:760px;margin:0 0 42px}.writing-showcase__kicker{margin:0 0 12px;color:#a22fc8;font-size:12px;font-weight:900;letter-spacing:.12em}.writing-showcase h1{margin:0;font-size:clamp(43px,6vw,76px);font-weight:900;letter-spacing:-.065em;line-height:.95}.writing-feature{display:grid;grid-template-columns:minmax(230px,360px) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center;max-width:1150px;padding-bottom:72px;border-bottom:1px solid rgba(25,7,37,.18)}.writing-cover{width:100%;display:block;box-shadow:14px 14px 0 #ff5b62}.writing-feature h2,.writing-card h2{margin:8px 0 14px;font-size:clamp(30px,4vw,52px);font-weight:900;line-height:.96;letter-spacing:-.05em}.writing-label{margin:0;color:#a22fc8;font-size:12px;font-weight:900;letter-spacing:.1em}.writing-feature p:last-child{margin:0;font-size:18px;line-height:1.6}.writing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:1150px;margin-top:42px}.writing-card{padding:32px;border:1px solid rgba(25,7,37,.22);background:#fffaff;box-shadow:8px 8px 0 rgba(162,47,200,.22)}.writing-card p{margin:0;font-size:17px;line-height:1.65}.writing-card blockquote{margin:27px 0 0;padding:18px 20px;border-right:4px solid #ff5b62;background:#f4e6ff;font-size:20px;font-weight:700;line-height:1.5}@media(max-width:700px){.writing-showcase{padding:70px 6vw 82px}.writing-feature{grid-template-columns:1fr;padding-bottom:56px}.writing-cover{max-width:340px}.writing-grid{grid-template-columns:1fr}.writing-card{padding:25px}.writing-card blockquote{font-size:18px}}
   </style>
 </head>
 <body>
@@ -26,6 +27,20 @@
       document.body.append(source.querySelector('#modal'));
       const app=document.createElement('script');app.textContent=source.scripts[source.scripts.length-1].textContent;document.body.append(app);
       const bonus=document.createElement('script');bonus.textContent="selectGallery('bonus')";document.body.append(bonus);
+      const showcase=document.createElement('section');
+      showcase.className='writing-showcase';
+      showcase.setAttribute('aria-label','קטעי כתיבה');
+      showcase.innerHTML=`
+        <div class="writing-showcase__heading"><p class="writing-showcase__kicker">כתיבה מקורית</p><h1>עוד עולמות על הדף</h1></div>
+        <div class="writing-feature">
+          <img class="writing-cover" src="media/bonus/pink-centipede-cover.png" alt="עטיפת פינק סנטיפד: הגיבורה שאנחנו צריכים">
+          <div><p class="writing-label">איור קונספט</p><h2>פינק סנטיפד</h2><p>הגיבורה שאנחנו צריכים — עולם קומיקס צבעוני שבו זהות, כוח ודמויות גדולות מהחיים נפגשים בעטיפה אחת.</p></div>
+        </div>
+        <div class="writing-grid">
+          <article class="writing-card"><p class="writing-label">מחזה</p><h2>הכאב שבשקט</h2><p>מחזה על עיסא, צעיר שמנסה להחזיק את עצמו בזמן שהעולם סביבו הולך ומתרחק.</p><blockquote>״אני באתי שיעזרו לי, אתם אמורים להיות לטובתי. תקפתם אותי — רק רציתי מטען.״</blockquote></article>
+          <article class="writing-card"><p class="writing-label">דרמה משפחתית</p><h2>אהבת אחים</h2><p>סוד מן העבר מאיים לפרק זוג צעיר שמתכנן חתונה, כששתי המשפחות מבינות שהאמת קרובה מדי.</p><blockquote>״מה יש לעשות? חייבים להפריד ביניהם!״</blockquote></article>
+        </div>`;
+      document.querySelector('#work').after(showcase);
     })().catch(()=>{document.querySelector('#gallery-host').innerHTML='<p style="padding:48px 7vw;color:#fffaff;background:#170627">לא הצלחנו לטעון את הקומיקס. נסו לרענן את הדף.</p>'});
   </script>
 </body>
