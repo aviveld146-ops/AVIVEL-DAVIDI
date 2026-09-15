@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">צומת ספרים</title>
+  <rect width="800" height="800" fill="#ffd41c"/>
+  <path d="M247 170c78 0 124 31 153 72v205c-37-47-87-69-153-69V170Zm306 0c-78 0-124 31-153 72v205c37-47 87-69 153-69V170Z" fill="#183b77"/>
+  <path d="M273 188c55 3 89 24 112 52v161c-31-25-67-37-112-37V188Zm254 0c-55 3-89 24-112 52v161c31-25 67-37 112-37V188Z" fill="#f26124"/>
+  <path d="M400 242v205" stroke="#ffd41c" stroke-width="12"/>
+  <text x="400" y="605" text-anchor="middle" fill="#141414" font-family="Arial, sans-serif" font-size="100" font-weight="800" direction="rtl">צומת ספרים</text>
+  <path d="M166 654h468" stroke="#141414" stroke-width="8"/>
+</svg>
