@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Tinder</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2b0c45"/>
+      <stop offset="1" stop-color="#13051e"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff7a64"/>
+      <stop offset="1" stop-color="#f33272"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="642" cy="155" r="188" fill="#922bc3" opacity=".3"/>
+  <path fill="url(#flame)" d="M407 129c20 125-102 147-80 269 12 69 71 122 146 122 94 0 165-75 157-169-7-91-75-137-121-210 3 85-29 125-78 149 27-72 1-121-24-161Z"/>
+  <text x="400" y="642" fill="#fffaff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="-5">tinder</text>
+  <path d="M218 681h364" stroke="#ff5b62" stroke-width="8"/>
+</svg>
