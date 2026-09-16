@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">סנו די</title>
+  <defs><linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#40c9e8"/><stop offset="1" stop-color="#087aa7"/></linearGradient></defs>
+  <rect width="800" height="800" fill="#ecfbff"/>
+  <circle cx="650" cy="147" r="185" fill="#b8f0fb"/>
+  <rect x="290" y="136" width="220" height="455" rx="54" fill="url(#blue)" stroke="#063f7a" stroke-width="13"/>
+  <rect x="334" y="76" width="132" height="94" rx="29" fill="#f4f9fa" stroke="#063f7a" stroke-width="13"/>
+  <path d="M345 326h110M345 377h110" stroke="#fff" stroke-width="12" opacity=".78"/>
+  <path d="M211 236c56 27 78 91 51 145m327-145c-56 27-78 91-51 145M197 414c53-25 117-8 148 39m258-39c-53-25-117-8-148 39" fill="none" stroke="#e52e32" stroke-width="16" stroke-linecap="round"/>
+  <text x="400" y="684" fill="#063f7a" font-family="Arial, sans-serif" font-size="92" font-weight="900" text-anchor="middle" direction="rtl">סנו די</text>
+  <text x="400" y="742" fill="#e52e32" font-family="Arial, sans-serif" font-size="29" font-weight="800" text-anchor="middle" letter-spacing="5">BYE BYE MOSQUITOES</text>
+</svg>
