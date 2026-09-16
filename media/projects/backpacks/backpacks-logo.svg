@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">תיקי מוצ'ילה</title>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1c5a72"/><stop offset="1" stop-color="#0c2635"/></linearGradient></defs>
+  <rect width="800" height="800" fill="url(#sky)"/>
+  <path d="m120 382 126-156 87 102 107-150 112 147 91-83 137 140H120Z" fill="#72b5c9" opacity=".82"/>
+  <path d="M290 225c0-54 44-98 98-98s98 44 98 98v61h26c35 0 64 29 64 64v230H200V350c0-35 29-64 64-64h26v-61Zm56 61h84v-61c0-23-19-42-42-42s-42 19-42 42v61Z" fill="#f5b84c"/>
+  <path d="M244 385h288M244 472h288" stroke="#0b2635" stroke-width="22"/><circle cx="302" cy="430" r="15" fill="#0b2635"/><circle cx="474" cy="430" r="15" fill="#0b2635"/>
+  <text x="400" y="696" fill="#fff9e8" font-family="Arial, sans-serif" font-size="90" font-weight="800" text-anchor="middle" direction="rtl">תיקי מוצ'ילה</text>
+  <text x="400" y="750" fill="#f5b84c" font-family="Arial, sans-serif" font-size="26" font-weight="800" text-anchor="middle" letter-spacing="6">GO FURTHER</text>
+</svg>
