@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Golda</title>
+  <defs><radialGradient id="pink" cx="32%" cy="20%"><stop stop-color="#ffb1c9"/><stop offset=".54" stop-color="#ef5687"/><stop offset="1" stop-color="#c92c61"/></radialGradient></defs>
+  <rect width="800" height="800" fill="url(#pink)"/>
+  <circle cx="617" cy="156" r="210" fill="#ffd1df" opacity=".2"/>
+  <circle cx="162" cy="640" r="167" fill="#aa1f50" opacity=".2"/>
+  <text x="400" y="424" fill="#fff7eb" stroke="#b81f52" stroke-width="5" paint-order="stroke" font-family="Georgia, serif" font-size="166" font-weight="700" font-style="italic" text-anchor="middle" letter-spacing="-12">GOLDA</text>
+  <path d="M172 498h456" stroke="#fff7eb" stroke-width="8"/><text x="400" y="562" fill="#fff7eb" font-family="Arial, sans-serif" font-size="32" font-weight="800" text-anchor="middle" letter-spacing="8">CRAZY GELATO</text>
+</svg>
