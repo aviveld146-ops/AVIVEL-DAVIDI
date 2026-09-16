@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">מקדונלד׳ס</title>
+  <rect width="800" height="800" fill="#d4141a"/>
+  <circle cx="632" cy="162" r="190" fill="#ef4550" opacity=".35"/>
+  <path d="M178 468V285c0-118 58-185 126-185 51 0 86 33 96 92 10-59 45-92 96-92 68 0 126 67 126 185v183h-68V287c0-66-21-109-58-109-38 0-62 46-62 117v173h-68V295c0-71-24-117-62-117-37 0-58 43-58 109v181h-68Z" fill="#ffc72c"/>
+  <text x="400" y="620" fill="#fff9e8" font-family="Arial, sans-serif" font-size="88" font-weight="800" text-anchor="middle" direction="rtl">מקדונלד׳ס</text>
+  <text x="400" y="686" fill="#ffc72c" font-family="Arial, sans-serif" font-size="29" font-weight="800" text-anchor="middle" letter-spacing="5">CATERING</text>
+  <path d="M176 731h448" stroke="#ffc72c" stroke-width="8"/>
+</svg>
