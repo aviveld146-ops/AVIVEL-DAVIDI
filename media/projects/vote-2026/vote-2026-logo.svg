@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">בחירות 2026</title>
+  <rect width="800" height="800" fill="#111a2b"/>
+  <circle cx="646" cy="150" r="190" fill="#283b5c" opacity=".75"/>
+  <path d="M215 224h370v278H215z" fill="#f6f2e9" stroke="#d2a84c" stroke-width="14"/>
+  <path d="m298 357 68 68 139-151" fill="none" stroke="#273d6d" stroke-width="29" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M274 503h252l64 91H210l64-91Z" fill="#d2a84c"/>
+  <text x="400" y="675" fill="#fff9e8" font-family="Arial, sans-serif" font-size="81" font-weight="900" text-anchor="middle" direction="rtl">בחירות 2026</text>
+  <text x="400" y="734" fill="#d2a84c" font-family="Arial, sans-serif" font-size="26" font-weight="800" text-anchor="middle" letter-spacing="4">YOUR CHOICE MATTERS</text>
+</svg>
