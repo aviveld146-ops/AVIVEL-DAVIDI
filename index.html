@@ -50,10 +50,10 @@
     .intro { min-height:100svh; background:radial-gradient(circle at 50% 48%,#7c31cb 0%,#37105e 24%,#170626 62%,#10051d 100%); }
     .intro:before { opacity:.32; background-image:radial-gradient(rgba(255,255,255,.4) 1px,transparent 1.5px),linear-gradient(135deg,transparent 48%,rgba(255,255,255,.1) 49%,rgba(255,255,255,.1) 51%,transparent 52%); background-size:9px 9px,48px 48px; mask-image:linear-gradient(90deg,transparent,black 18%,black 82%,transparent); }
     .intro:after { content:""; position:absolute; width:150vmax; height:150vmax; border:2px solid rgba(255,250,255,.12); border-radius:50%; top:50%; left:50%; transform:translate(-50%,-50%); }
-    .intro-mark:before { background:rgba(244,190,212,.36); filter:blur(25px); }
-    .intro-mark .mark-depth { filter:brightness(.36) sepia(.28) hue-rotate(205deg) saturate(1.25); opacity:.78; }
-    .intro-mark .mark-face { filter:brightness(0) saturate(100%) invert(91%) sepia(9%) saturate(1274%) hue-rotate(211deg) brightness(104%) contrast(94%) drop-shadow(0 22px 30px rgba(7,1,14,.42)) drop-shadow(0 0 12px rgba(255,250,255,.2)); }
-    .intro-mark .mark-back { filter:brightness(0) saturate(100%) invert(84%) sepia(31%) saturate(539%) hue-rotate(289deg) brightness(102%) contrast(96%) drop-shadow(0 22px 30px rgba(7,1,14,.42)); }
+    .intro-mark:before { background:rgba(147,83,224,.34); filter:blur(25px); }
+    .intro-mark .mark-depth { filter:brightness(.22) sepia(.38) hue-rotate(222deg) saturate(1.75) contrast(1.18) drop-shadow(1px 0 0 #050108) drop-shadow(-1px 0 0 #050108); opacity:.9; }
+    .intro-mark .mark-face { filter:brightness(0) saturate(100%) invert(67%) sepia(41%) saturate(1239%) hue-rotate(218deg) brightness(101%) contrast(101%) drop-shadow(2px 0 0 #050108) drop-shadow(-2px 0 0 #050108) drop-shadow(0 2px 0 #050108) drop-shadow(0 -2px 0 #050108) drop-shadow(0 22px 30px rgba(7,1,14,.58)); }
+    .intro-mark .mark-back { filter:brightness(0) saturate(100%) invert(65%) sepia(42%) saturate(1169%) hue-rotate(302deg) brightness(96%) contrast(103%) drop-shadow(2px 0 0 #050108) drop-shadow(-2px 0 0 #050108) drop-shadow(0 2px 0 #050108) drop-shadow(0 -2px 0 #050108) drop-shadow(0 22px 30px rgba(7,1,14,.58)); }
     .scroll-cue { position:absolute; z-index:3; left:50%; bottom:28px; display:grid; place-items:center; width:58px; height:68px; color:var(--cream); text-decoration:none; transform:translateX(-50%); }
     .scroll-cue:before { content:""; position:absolute; top:0; width:2px; height:27px; background:rgba(255,250,255,.84); box-shadow:0 0 12px rgba(255,250,255,.4); }
     .scroll-cue span { margin-top:24px; font-size:42px; font-weight:700; line-height:1; text-shadow:0 0 16px rgba(255,250,255,.55); animation:scroll-bounce 1.65s ease-in-out infinite; }
