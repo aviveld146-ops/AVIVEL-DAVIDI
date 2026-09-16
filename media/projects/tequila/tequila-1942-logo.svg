@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Don Julio 1942</title>
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".54" stop-color="#d9ad49"/><stop offset="1" stop-color="#8d5b18"/></linearGradient></defs>
+  <rect width="800" height="800" fill="#10291e"/>
+  <circle cx="634" cy="158" r="185" fill="#315d42" opacity=".56"/>
+  <path d="M345 125h110v106l51 74v270c0 56-47 101-106 101s-106-45-106-101V305l51-74V125Z" fill="#163d2d" stroke="url(#gold)" stroke-width="14"/>
+  <path d="M337 340h126M337 451h126" stroke="#d9ad49" stroke-width="8" opacity=".7"/><text x="400" y="417" fill="#fff2bc" font-family="Georgia, serif" font-size="54" font-weight="700" text-anchor="middle">1942</text>
+  <text x="400" y="722" fill="#fff2bc" font-family="Georgia, serif" font-size="67" font-weight="700" text-anchor="middle">DON JULIO</text><text x="400" y="770" fill="#d9ad49" font-family="Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle" letter-spacing="5">TEQUILA</text>
+</svg>
