@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title">
+  <title id="title">מוזיאון תל אביב לאמנות</title>
+  <rect width="720" height="720" fill="#f7f0e5"/>
+  <path d="M108 116h244v62H170v170h182v62H108z" fill="#12438b"/>
+  <path d="M612 604H368v-62h182V372H368v-62h244z" fill="#e6532b"/>
+  <path d="M360 116v488" stroke="#151515" stroke-width="14"/>
+  <text x="360" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#151515">מוזיאון</text>
+  <text x="360" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#151515">תל אביב</text>
+  <text x="360" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#151515">לאמנות</text>
+</svg>
