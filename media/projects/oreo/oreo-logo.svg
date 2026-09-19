@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title">
+  <title id="title">OREO</title>
+  <rect width="720" height="720" fill="#17489b"/>
+  <circle cx="360" cy="360" r="228" fill="none" stroke="#fff" stroke-width="14" opacity=".9"/>
+  <circle cx="360" cy="360" r="192" fill="none" stroke="#fff" stroke-width="6" stroke-dasharray="9 13" opacity=".76"/>
+  <path d="M210 360h300M360 210v300" stroke="#fff" stroke-width="5" opacity=".55"/>
+  <text x="360" y="394" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="116" font-weight="900" letter-spacing="-8" fill="#fff">OREO</text>
+</svg>
