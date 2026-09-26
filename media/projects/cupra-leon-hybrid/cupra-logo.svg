@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title">
+  <title id="title">CUPRA</title>
+  <rect width="720" height="720" fill="#111113"/>
+  <path d="M360 116 588 255 472 333l-112 213-112-213-116-78z" fill="none" stroke="#c97e50" stroke-width="25" stroke-linejoin="round"/>
+  <path d="m360 116 78 143-78 115-78-115z" fill="#c97e50"/>
+  <text x="360" y="638" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="700" letter-spacing="14" fill="#c97e50">CUPRA</text>
+</svg>
