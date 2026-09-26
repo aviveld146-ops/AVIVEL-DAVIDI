@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title">
+  <title id="title">אפרופו</title>
+  <rect width="720" height="720" rx="56" fill="#f4b627"/>
+  <path d="M126 130h468v460H126z" fill="#f7d66a" stroke="#a7491e" stroke-width="18"/>
+  <path d="M150 180h420M150 540h420" stroke="#fff6da" stroke-width="14" opacity=".8"/>
+  <text x="360" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="144" font-weight="900" fill="#4b2014">אפרופו</text>
+</svg>
