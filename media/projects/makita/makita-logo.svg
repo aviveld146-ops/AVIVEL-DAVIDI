@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title">
+  <title id="title">Makita</title>
+  <rect width="720" height="720" fill="#e12027"/>
+  <path d="M72 126h576v468H72z" fill="none" stroke="#fff" stroke-width="15"/>
+  <text x="360" y="412" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="128" font-weight="900" font-style="italic" letter-spacing="-11" fill="#fff">Makita</text>
+</svg>
