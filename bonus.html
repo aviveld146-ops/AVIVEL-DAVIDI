@@ -27,7 +27,7 @@
       const app=document.createElement('script');app.textContent=source.scripts[source.scripts.length-1].textContent;document.body.append(app);
       const bonus=document.createElement('script');bonus.textContent=`
         selectGallery('bonus');
-        const transferredProjects=['KIT KAT',"ג'אפניקה",'טבסקו','אפל','וידאו נוסף','אנימציות']
+        const transferredProjects=['KIT KAT',"ג'אפניקה",'טבסקו','שונות','אפל','וידאו נוסף','אנימציות']
           .map(title=>projects.find(project=>project.title===title))
           .filter(Boolean);
         const bonusProjects=[
