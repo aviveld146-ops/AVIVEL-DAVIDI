@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title">
+  <title id="title">המרכז הישראלי לטניס</title>
+  <rect width="900" height="900" rx="48" fill="#fff"/>
+  <circle cx="450" cy="390" r="265" fill="#0c4d95"/>
+  <circle cx="450" cy="390" r="218" fill="none" stroke="#5fa8dd" stroke-width="16"/>
+  <ellipse cx="440" cy="402" rx="72" ry="140" fill="none" stroke="#ffd642" stroke-width="28" transform="rotate(27 440 402)"/>
+  <path d="M503 525l82 137" stroke="#ffd642" stroke-width="31" stroke-linecap="round"/>
+  <circle cx="530" cy="301" r="25" fill="#fff"/>
+  <text x="450" y="770" text-anchor="middle" fill="#0c4d95" font-family="Arial, sans-serif" font-size="52" font-weight="800">המרכז הישראלי לטניס</text>
+  <text x="450" y="830" text-anchor="middle" fill="#5d8cb8" font-family="Arial, sans-serif" font-size="29" font-weight="700">TENNIS &amp; EDUCATION CENTERS ISRAEL</text>
+</svg>
