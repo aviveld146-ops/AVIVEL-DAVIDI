@@ -37,7 +37,7 @@
     .intro-mark .mark-back { transform:rotateY(180deg) translateZ(2px); filter:drop-shadow(0 34px 24px rgba(0,0,0,.72)) drop-shadow(0 1px 0 rgba(255,255,255,.16)); backface-visibility:hidden }
     @keyframes intro-spin { from { transform:perspective(1000px) rotateX(4deg) rotateY(0deg) rotateZ(-2deg) } 50% { transform:perspective(1000px) rotateX(-3deg) rotateY(180deg) rotateZ(2deg) } to { transform:perspective(1000px) rotateX(4deg) rotateY(360deg) rotateZ(-2deg) } }
     .hero-grid{grid-template-columns:.92fr 1.04fr;grid-template-areas:"portrait copy"}.hero-mark{display:none}
-    .project-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{min-height:0;aspect-ratio:1}.card>img,.video-cover{min-height:0;height:100%;aspect-ratio:1;object-fit:cover}
+    .project-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{min-height:0;aspect-ratio:1}.card>img,.video-cover{min-height:0;height:100%;aspect-ratio:1;object-fit:cover}.card--logo>img{object-fit:contain;padding:9%;background:#07192d}
     @media(prefers-reduced-motion:reduce){.intro-mark,.scroll-cue span{animation:none}}
     @media(max-width:1100px){.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:850px){.intro-mark{width:min(74vw,390px)}.hero-grid{grid-template-columns:minmax(128px,39vw) minmax(0,1fr);grid-template-areas:"portrait copy"}}
@@ -265,7 +265,7 @@
     const comicProject=projects.find(project=>project.title==='סימן לידה');
     const bonusProjectTitles=new Set(['KIT KAT','ג\'אפניקה','טבסקו','שונות','אפל','וידאו נוסף','אנימציות','נייק','פלסטר']);
     const studyProjects=projects.filter(project=>project!==comicProject&&!bonusProjectTitles.has(project.title));
-    function renderGrid(list){grid.innerHTML='';list.forEach((project,i)=>{const card=document.createElement('button');card.className='card';card.innerHTML=`${project.cover?`<img src="${project.cover}" alt="${project.title}" loading="lazy">`:cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>project.href?window.location.href=project.href:open(project);grid.append(card)})}
+function renderGrid(list){grid.innerHTML='';list.forEach((project,i)=>{const card=document.createElement('button');card.className=project.title==="5 גולד"?'card card--logo':'card';card.innerHTML=`${project.cover?`<img src="${project.cover}" alt="${project.title}" loading="lazy">`:cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>project.href?window.location.href=project.href:open(project);grid.append(card)})}
     function selectGallery(mode){const bonus=mode==='bonus';workTitle.textContent=bonus?'בונוס: סימן לידה':'עבודות בלימודים';workKicker.textContent=bonus?'02 / BONUS':'01 / PORTFOLIO';galleryNote.textContent=bonus?'הצצה לחוברת הקומיקס שכתבתי — לחצו כדי לדפדף בפרק הראשון.':'כל תיקייה היא פרויקט. לחצו כדי להיכנס לגלריה המלאה.';renderGrid(bonus?[comicProject]:studyProjects)}
     document.querySelectorAll('[data-gallery]').forEach(link=>link.addEventListener('click',()=>selectGallery(link.dataset.gallery)));
     selectGallery('studies');
