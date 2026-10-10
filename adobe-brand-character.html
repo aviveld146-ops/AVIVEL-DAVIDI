@@ -19,7 +19,7 @@
   <div class="dialog" id="dialog" hidden><button class="close" id="close" type="button" aria-label="סגירה">×</button><div id="expanded"></div></div>
   <script>
     const root='media/projects/adobe-brand-character/';
-    const characters=[['asset-6.png','Ad — דמות הבסיס'],['asset-8.png','Photoshop — Ps'],['asset-9.png','After Effects — Ae'],['asset-10.png','Premiere Pro — Pr'],['asset-11.png','Illustrator — Ai'],['asset-12.png','InDesign — Id'],['asset-13.png','Lightroom — Lr'],['asset-14.png','Audition — Au'],['asset-15.png','Acrobat']];
+    const characters=[['asset-6.png','Ad — דמות הבסיס'],['asset-8.png','Photoshop — Ps'],['asset-9.png','After Effects — Ae'],['asset-10.png','Premiere Pro — Pr'],['asset-11.png','Lightroom — Lr'],['asset-12.png','InDesign — Id'],['asset-13.png','Illustrator — Ai'],['asset-14.png','Audition — Au'],['asset-15.png','Acrobat']];
     const clips=[['ad-photoshop.mp4','שינוי צורה ל־Photoshop'],['ad-after-effects.mp4','שינוי צורה ל־After Effects'],['ad-premiere.mp4','שינוי צורה ל־Premiere Pro']];
     const gallery=document.querySelector('#gallery'),videos=document.querySelector('#videos'),dialog=document.querySelector('#dialog'),expanded=document.querySelector('#expanded');
     gallery.innerHTML=characters.map(([file,label])=>`<figure class="art"><img src="${root}${file}" alt="${label}" loading="lazy"><figcaption>${label}</figcaption></figure>`).join('');
