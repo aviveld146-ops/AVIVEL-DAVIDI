@@ -31,10 +31,10 @@
           .map(title=>projects.find(project=>project.title===title))
           .filter(Boolean);
         const bonusProjects=[
-          ...transferredProjects,
           comicProject,
+          {title:'פינק סנטפיד',subtitle:'סדרת גיבורת על מקורית',href:'pink-centipede.html',items:[{type:'image',src:'media/bonus/pink-centipede-cover.png'}]},
           {title:'שני עולמות',subtitle:'סדרת פנטזיה מקורית',href:'two-worlds.html',items:[{type:'image',src:'media/bonus/two-worlds/pendant.png'}]},
-          {title:'פינק סנטיפד',subtitle:'סדרת גיבורת על מקורית',href:'pink-centipede.html',items:[{type:'image',src:'media/bonus/pink-centipede-cover.png'}]},
+          ...transferredProjects,
           {title:'הכאב שבשקט',subtitle:'מחזה לקריאה מלאה',items:[{type:'text',src:'media/writing/the-pain-in-silence.txt'}]},
           {title:'אהבת אחים',subtitle:'מחזה לקריאה מלאה',items:[{type:'text',src:'media/writing/brotherly-love.txt'}]}
         ];
