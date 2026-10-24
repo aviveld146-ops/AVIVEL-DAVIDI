@@ -18,10 +18,13 @@
   </style>
 </head>
 <body>
+  <style>
+    .hero-visual video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0a1b30}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px}.video-card{margin:0;background:#1a3557;border:1px solid var(--line);overflow:hidden}.video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0a1b30}.expand-video{width:100%;border:0;border-top:1px solid var(--line);padding:14px;background:#1a3557;color:var(--cream);font:700 13px "Heebo",Arial,sans-serif;cursor:pointer}.expand-video:hover{background:#275483;color:var(--orange)}.video-dialog{position:fixed;z-index:20;inset:0;display:grid;place-items:center;padding:26px;background:rgba(7,17,31,.96)}.video-dialog[hidden]{display:none}.video-dialog video{display:block;width:min(94vw,1280px);max-height:85vh;background:#000}.close-video-dialog{position:fixed;top:20px;left:24px;width:48px;height:48px;border:1px solid var(--line);background:rgba(18,39,67,.9);color:var(--cream);font-size:32px;cursor:pointer}.close-video-dialog:hover{color:var(--orange)}@media(max-width:850px){.gallery{grid-template-columns:1fr;max-width:none}}
+  </style>
   <header class="topbar"><a class="brand" href="index.html">AVIVEL<br>DAVIDI</a><a class="back" href="works.html">חזרה לעבודות</a></header>
   <main>
     <section class="hero">
-      <figure class="hero-visual"><img src="media/projects/english-course/english-course-shift-word.webp" alt="מודעת קורס אנגלית על המילה Shift"></figure>
+      <figure class="hero-visual"><video src="media/videos/duolingo-waiter.mp4" autoplay muted loop playsinline controls aria-label="סרטון דואלינגו — מלצר"></video></figure>
       <div class="hero-copy"><p class="eyebrow">04 / CASE STUDY</p><h1>DUOLINGO<br>BINGO</h1><p class="lead">למילים יש לפעמים יותר ממשמעות אחת. אל תתנו לזה לעצור אתכם.</p><hr class="accent"></div>
     </section>
     <section class="story" aria-label="מאחורי הקמפיין">
@@ -30,23 +33,25 @@
       <article class="story-card"><p class="story-num">03 / מה עשיתי</p><h2>ארבעה קריאייטיבים</h2><p>יצרתי סדרת קריאייטיבים לשלטי חוצות ולפוסטים ברשתות החברתיות, שמפרקת את הבלבול במילים.</p></article>
     </section>
     <section>
-      <div class="work-head"><h2>העבודות בקמפיין</h2></div>
+      <div class="work-head"><h2>הסרטונים בקמפיין</h2></div>
       <div class="gallery">
-        <figure><button type="button" data-full="media/projects/english-course/english-course-shift-word.webp" aria-label="הגדלת עבודה 1"><img src="media/projects/english-course/english-course-shift-word.webp" alt="מודעת קורס אנגלית 1"></button></figure>
-        <figure><button type="button" data-full="media/projects/english-course/english-course-service-word.webp" aria-label="הגדלת עבודה 2"><img src="media/projects/english-course/english-course-service-word.webp" alt="מודעת קורס אנגלית 2"></button></figure>
-        <figure><button type="button" data-full="media/projects/english-course/english-course-note-word.webp" aria-label="הגדלת עבודה 3"><img src="media/projects/english-course/english-course-note-word.webp" alt="מודעת קורס אנגלית 3"></button></figure>
-        <figure><button type="button" data-full="media/projects/english-course/english-course-credit-word.webp" aria-label="הגדלת עבודה 4"><img src="media/projects/english-course/english-course-credit-word.webp" alt="מודעת קורס אנגלית 4"></button></figure>
+        <figure class="video-card"><video src="media/videos/duolingo-waiter.mp4" controls playsinline preload="metadata" aria-label="סרטון דואלינגו — מלצר"></video><button class="expand-video" type="button" data-video="media/videos/duolingo-waiter.mp4">צפייה במסך מלא ↗</button></figure>
+        <figure class="video-card"><video src="media/videos/duolingo-soldier.mp4" controls playsinline preload="metadata" aria-label="סרטון דואלינגו — חייל"></video><button class="expand-video" type="button" data-video="media/videos/duolingo-soldier.mp4">צפייה במסך מלא ↗</button></figure>
+        <figure class="video-card"><video src="media/videos/duolingo-work.mp4" controls playsinline preload="metadata" aria-label="סרטון דואלינגו — עבודה"></video><button class="expand-video" type="button" data-video="media/videos/duolingo-work.mp4">צפייה במסך מלא ↗</button></figure>
+        <figure class="video-card"><video src="media/videos/duolingo-parents.mp4" controls playsinline preload="metadata" aria-label="סרטון דואלינגו — הורים"></video><button class="expand-video" type="button" data-video="media/videos/duolingo-parents.mp4">צפייה במסך מלא ↗</button></figure>
       </div>
     </section>
     <footer class="footer"><p>אביב-אל דוידי · קופי, ארט וכתיבה</p><a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a></footer>
   </main>
-  <button class="image-dialog" id="image-dialog" type="button" hidden aria-label="סגירת התמונה המוגדלת"><span>×</span><img id="dialog-image" alt=""></button>
+  <div class="video-dialog" id="video-dialog" hidden><button class="close-video-dialog" type="button" aria-label="סגירת הסרטון">×</button><video id="dialog-video" controls playsinline></video></div>
   <script>
-    const dialog=document.querySelector('#image-dialog');
-    const dialogImage=document.querySelector('#dialog-image');
-    document.querySelectorAll('[data-full]').forEach(button=>button.addEventListener('click',()=>{dialogImage.src=button.dataset.full;dialogImage.alt=button.querySelector('img').alt;dialog.hidden=false;document.body.style.overflow='hidden'}));
-    dialog.addEventListener('click',()=>{dialog.hidden=true;dialogImage.removeAttribute('src');document.body.style.overflow=''});
-    window.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog.hidden)dialog.click()});
+    const dialog=document.querySelector('#video-dialog');
+    const dialogVideo=document.querySelector('#dialog-video');
+    const closeDialog=()=>{dialog.hidden=true;dialogVideo.pause();dialogVideo.removeAttribute('src');dialogVideo.load();document.body.style.overflow=''};
+    document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{dialogVideo.src=button.dataset.video;dialog.hidden=false;document.body.style.overflow='hidden';dialogVideo.play().catch(()=>{})}));
+    document.querySelector('.close-video-dialog').addEventListener('click',closeDialog);
+    dialog.addEventListener('click',event=>{if(event.target===dialog)closeDialog()});
+    window.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog.hidden)closeDialog()});
   </script>
 </body>
 </html>
