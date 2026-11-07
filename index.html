@@ -213,14 +213,14 @@
     function finishLoading(){
       if(loadingFinished)return;
       loadingFinished=true;
+      if(!loadingScreen||!siteContent)return;
       document.body.classList.remove('is-loading');
       siteContent.setAttribute('aria-busy','false');
       loadingScreen.classList.add('is-complete');
       loadingScreen.addEventListener('transitionend',()=>loadingScreen.remove(),{once:true});
     }
-    const minimumLoadingTime=Math.max(0,1250-performance.now());
-    window.addEventListener('load',()=>window.setTimeout(finishLoading,minimumLoadingTime),{once:true});
-    window.setTimeout(finishLoading,5000);
+    window.addEventListener('load',finishLoading,{once:true});
+    window.setTimeout(finishLoading,700);
     const image = (slug,file) => `media/projects/${slug}/${file}`;
     const video = file => `media/videos/${file}`;
     const projects = [
@@ -265,11 +265,11 @@ projects.find(project=>project.title==="OREO TIME").items.unshift({type:"video",
       {title:"אנימציות",subtitle:"Motion experiments",items:["אנימציית טעינה 1.mp4","אנימציית טעינה 2.mp4"].map(src=>({type:"video",src:image("misc",src)}))}
     );
     const grid=document.querySelector('#project-grid'),modal=document.querySelector('#modal'),content=document.querySelector('#modal-content'),caption=document.querySelector('#caption'),thumbs=document.querySelector('#thumbs'),workTitle=document.querySelector('#work-title'),workKicker=document.querySelector('#work-kicker'),galleryNote=document.querySelector('#gallery-note'); let active=null,index=0;
-    const cardMedia=item=>item.type==='video'?`<video class="video-cover" src="${item.src}" muted preload="metadata"></video>`:item.type==='text'?`<div class="writing-card-cover"><span>מחזה<br><b>לקריאה מלאה</b></span></div>`:`<img src="${item.src}" alt="" loading="lazy">`;
+    const cardMedia=item=>item.type==='video'?`<video class="video-cover" src="${item.src}" muted preload="none"></video>`:item.type==='text'?`<div class="writing-card-cover"><span>מחזה<br><b>לקריאה מלאה</b></span></div>`:`<img src="${item.src}" alt="" loading="lazy" decoding="async">`;
     const comicProject=projects.find(project=>project.title==='סימן לידה');
     const bonusProjectTitles=new Set(['KIT KAT','ג\'אפניקה','טבסקו','שונות','אפל','פרסומת למטרייה','אנימציות','נייק','פלסטר','תה אנגלי','COSMIC CAT CAFE']);
     const studyProjects=projects.filter(project=>project!==comicProject&&!bonusProjectTitles.has(project.title));
-function renderGrid(list){grid.innerHTML='';list.forEach((project,i)=>{const card=document.createElement('button');card.className=['5 גולד','טניס','סימן לידה','פינק סנטיפד','שני עולמות','adobe brand character'].includes(project.title)?'card card--logo':'card';card.innerHTML=`${project.cover?`<img src="${project.cover}" alt="${project.title}" loading="lazy">`:cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>project.href?window.location.href=project.href:open(project);grid.append(card)})}
+function renderGrid(list){grid.innerHTML='';list.forEach((project,i)=>{const card=document.createElement('button');card.className=['5 גולד','טניס','סימן לידה','פינק סנטיפד','שני עולמות','adobe brand character'].includes(project.title)?'card card--logo':'card';card.innerHTML=`${project.cover?`<img src="${project.cover}" alt="${project.title}" loading="lazy" decoding="async">`:cardMedia(project.items[0])}<span class="number">${String(i+1).padStart(2,'0')}</span><div class="meta"><h3>${project.title}</h3><p>${project.subtitle} · ${project.items.length} visuals</p></div><span class="arrow">↙</span>`;card.onclick=()=>project.href?window.location.href=project.href:open(project);grid.append(card)})}
     function selectGallery(mode){const bonus=mode==='bonus';workTitle.textContent=bonus?'בונוס - שווה לבדוק!':'עבודות בלימודים';workKicker.textContent=bonus?'02 / BONUS':'01 / PORTFOLIO';galleryNote.textContent=bonus?'הצצה לחוברת הקומיקס שכתבתי — לחצו כדי לדפדף בפרק הראשון.':'כל תיקייה היא פרויקט. לחצו כדי להיכנס לגלריה המלאה.';renderGrid(bonus?[comicProject]:studyProjects)}
     document.querySelectorAll('[data-gallery]').forEach(link=>link.addEventListener('click',()=>selectGallery(link.dataset.gallery)));
     selectGallery('studies');
