@@ -16,5 +16,6 @@
     <footer class="footer"><p>סימן לידה · קומיקס מאת אביב-אל דוידי</p><a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a></footer>
   </main>
   <script>const pages=document.querySelector('#pages');for(let page=1;page<=37;page+=1){const number=String(page).padStart(3,'0'),figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');figure.className='comic-page';image.src=`media/projects/comic/${number}.png`;image.alt=`סימן לידה — עמוד ${page}`;image.loading=page<3?'eager':'lazy';caption.textContent=number;figure.append(image,caption);pages.append(figure)}</script>
+  <script src="project-navigation.js" defer></script>
 </body>
 </html>

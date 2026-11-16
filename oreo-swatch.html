@@ -39,5 +39,6 @@
   <script>
     const dialog=document.querySelector('#image-dialog');const dialogImage=document.querySelector('#dialog-image');document.querySelectorAll('[data-full]').forEach(button=>button.addEventListener('click',()=>{dialogImage.src=button.dataset.full;dialogImage.alt=button.querySelector('img').alt;dialog.hidden=false;document.body.style.overflow='hidden'}));dialog.addEventListener('click',()=>{dialog.hidden=true;dialogImage.removeAttribute('src');document.body.style.overflow=''});window.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog.hidden)dialog.click()});
   </script>
+  <script src="project-navigation.js" defer></script>
 </body>
 </html>

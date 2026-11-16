@@ -27,5 +27,6 @@
     gallery.querySelectorAll('.art').forEach(card=>card.addEventListener('click',()=>{const clip=Object.entries(clips).find(([file])=>card.dataset.image.endsWith(file));expanded.innerHTML=clip?`<video src="${root}${clip[1]}" controls autoplay loop playsinline aria-label="${card.dataset.label}"></video>`:`<img src="${card.dataset.image}" alt="${card.dataset.label}">`;dialog.hidden=false;document.body.style.overflow='hidden';expanded.querySelector('video')?.requestFullscreen?.().catch(()=>{})}));
     document.querySelector('#close').onclick=close;dialog.addEventListener('click',event=>{if(event.target===dialog)close()});document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&!dialog.hidden)close()});window.addEventListener('keydown',event=>{if(event.key==='Escape'&&!dialog.hidden)close()});
   </script>
+  <script src="project-navigation.js" defer></script>
 </body>
 </html>
