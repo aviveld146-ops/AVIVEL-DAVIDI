@@ -5,7 +5,7 @@
     const style = document.createElement('style');
     style.textContent = `
       .project-return-link { font: 800 14px/1.2 Arial, sans-serif; text-decoration: none; }
-      main > .project-return-link--top { display: inline-flex; width: fit-content; margin: 0 auto 28px 0; }
+      main > .project-return-link--top { display: flex; width: fit-content; margin: 0 auto 28px 0; }
       .project-return-link--bottom { display: inline-flex; width: fit-content; margin: 48px auto 58px 0; padding: 12px 18px; border: 2px solid currentColor; border-radius: 999px; }
       .project-return-link--bottom:hover { opacity: .72; }
     `;
