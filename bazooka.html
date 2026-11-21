@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="בזוקה — סדרת סיפורים קצרים">
+  <title>בזוקה — אביב-אל דוידי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#101f61;--blue:#0756b8;--red:#f32731;--cream:#fff9df;--line:rgba(16,31,97,.18)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Heebo",Arial,sans-serif;background-image:radial-gradient(rgba(7,86,184,.11) 1px,transparent 1px);background-size:13px 13px}a{color:inherit}.topbar{min-height:82px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;background:var(--blue);color:#fff}.brand{font-size:18px;font-weight:900;letter-spacing:-.08em;line-height:.82;text-decoration:none;direction:ltr}.back{font-size:14px;font-weight:800;text-decoration:none;border-bottom:2px solid #fff;padding-bottom:4px}.back:hover{color:#ffe35c}main{max-width:1440px;margin:auto;padding:72px 7vw 100px}.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(330px,.9fr);gap:68px;align-items:center;padding-bottom:78px;border-bottom:1px solid var(--line)}.hero-visual{margin:0;position:relative}.hero-visual:before{content:"";position:absolute;z-index:-1;inset:28px -24px -24px 24px;background:var(--red);transform:rotate(2deg)}.hero-visual img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;background:#fff}.eyebrow{margin:0;color:var(--red);font-size:12px;font-weight:900;letter-spacing:.1em;direction:ltr}.hero h1{margin:22px 0;font-size:clamp(58px,8vw,120px);letter-spacing:-.08em;line-height:.8;color:var(--red)}.lead{margin:0;font-size:clamp(22px,2.35vw,37px);font-weight:900;line-height:1.22}.accent{width:220px;border:0;border-top:5px solid var(--blue);margin:36px 0}.summary{font-size:18px;line-height:1.7;max-width:29em;margin:0}.work-head{padding-top:52px}.work-head h2{margin:0;font-size:clamp(42px,5vw,76px);letter-spacing:-.055em;line-height:.9}.work-head p{margin:16px 0 0;font-size:17px}.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:38px}.art{margin:0;background:#fff;border:1px solid var(--line);box-shadow:0 12px 26px rgba(16,31,97,.13);cursor:zoom-in;overflow:hidden}.art img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .35s}.art:hover img{transform:scale(1.04)}.art figcaption{padding:11px 13px;font-weight:800}.dialog{position:fixed;z-index:20;inset:0;display:grid;place-items:center;padding:26px;background:rgba(5,14,55,.94)}.dialog[hidden]{display:none}.dialog img{display:block;max-width:94vw;max-height:88vh;object-fit:contain}.close{position:fixed;top:20px;left:24px;width:48px;height:48px;border:1px solid #fff;background:var(--blue);color:#fff;font-size:32px;cursor:pointer}.footer{margin-top:90px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:22px;font-size:13px}.footer a{text-decoration:none;font-weight:900}@media(max-width:850px){.topbar{min-height:68px;padding:0 6vw}main{padding:50px 6vw 76px}.hero{grid-template-columns:1fr;gap:36px;padding-bottom:56px}.hero-visual{order:2}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:28px}.footer{margin-top:60px;display:block}.footer p{margin:0 0 12px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html">AVIVEL<br>DAVIDI</a><a class="back" href="works.html">חזרה לעבודות</a></header>
+  <main>
+    <section class="hero"><figure class="hero-visual"><img src="media/bonus/bazooka/bubble-postman.png" alt="דוור מנפח בלון מסטיק בזוקה"></figure><div><p class="eyebrow">BONUS / CAMPAIGN</p><h1>בזוקה</h1><p class="lead">שבעה סיפורים קצרים עם בלון גדול.</p><hr class="accent"><p class="summary">סדרה של קריאייטיבים בהשראת העולם הצבעוני, הנועז והמצחיק של בזוקה — מבלוני מסטיק ועד בדיחות קומיקס.</p></div></section>
+    <section><div class="work-head"><h2>הסדרה</h2><p>לחצו על תמונה להגדלה.</p></div><div class="gallery" id="gallery"></div></section>
+    <footer class="footer"><p>אביב-אל דוידי · קופי, ארט וכתיבה</p><a href="mailto:AVIVELD146@GMAIL.COM">AVIVELD146@GMAIL.COM</a></footer>
+  </main>
+  <div class="dialog" id="dialog" hidden><button class="close" id="close" type="button" aria-label="סגירה">×</button><img id="expanded" alt=""></div>
+  <script>
+    const images=['bubble-postman.png','bubble-greta-v2.png','bubble-karsen.png','bubble-sharshar.png','joke-postman.png','joke-karsen.png','joke-sharshar.png'];
+    const gallery=document.querySelector('#gallery'),dialog=document.querySelector('#dialog'),expanded=document.querySelector('#expanded');
+    gallery.innerHTML=images.map((file,index)=>`<figure class="art"><img src="media/bonus/bazooka/${file}" alt="עבודת בזוקה ${index+1}" loading="lazy"><figcaption>עבודה ${String(index+1).padStart(2,'0')}</figcaption></figure>`).join('');
+    gallery.querySelectorAll('img').forEach(image=>image.addEventListener('click',()=>{expanded.src=image.src;expanded.alt=image.alt;dialog.hidden=false;document.body.style.overflow='hidden'}));
+    const close=()=>{dialog.hidden=true;document.body.style.overflow=''};document.querySelector('#close').onclick=close;dialog.addEventListener('click',event=>{if(event.target===dialog)close()});window.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+  </script>
+  <script src="project-navigation.js" defer></script>
+</body>
+</html>
